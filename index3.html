@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
- <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+ <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-T7KFBR2K');</script>
-<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>子どもの健康を守る窓リフォーム｜補助金で断熱・結露・カビ対策</title>
@@ -17,25 +15,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --sky:        #4aaae0;
-    --sky-mid:    #68bce8;
-    --sky-light:  #a4d4f0;
-    --sky-pale:   #e8f5fc;
-    --sky-deep:   #2d7db8;
-    --cream:      #fefcf8;
-    --cream-mid:  #f8f3ec;
-    --coral:      #f07878;
+    --sky:         #4aaae0;
+    --sky-mid:     #68bce8;
+    --sky-light:   #a4d4f0;
+    --sky-pale:    #e8f5fc;
+    --sky-deep:    #2d7db8;
+    --cream:       #fefcf8;
+    --cream-mid:   #f8f3ec;
+    --coral:       #f07878;
     --coral-light:#fde8e8;
     --coral-pale: #fff0f0;
-    --mint:       #68c8a0;
-    --dark:       #1a2c3a;
-    --text:       #2d3d4a;
-    --gray:       #6a7a88;
+    --mint:        #68c8a0;
+    --dark:        #1a2c3a;
+    --text:        #2d3d4a;
+    --gray:        #6a7a88;
     --gray-light: #f4f8fc;
-    --white:      #ffffff;
-    --radius:     24px;
-    --shadow:     0 4px 24px rgba(26,44,58,0.08);
-    --shadow-lg:  0 12px 48px rgba(26,44,58,0.14);
+    --white:       #ffffff;
+    --radius:      24px;
+    --shadow:      0 4px 24px rgba(26,44,58,0.08);
+    --shadow-lg:   0 12px 48px rgba(26,44,58,0.14);
   }
   html { scroll-behavior: smooth; }
   body {
@@ -444,9 +442,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .btn-form:hover { background: var(--sky-pale); transform: translateY(-3px); }
   .cta-note { font-size: 0.8rem; color: var(--gray); font-weight: 300; }
 
-  /* ===== FORM ===== */
+  /* ===== FORM (重要: 追加・差し替え) ===== */
   .form-section { background: var(--cream); }
   .form-inner { max-width: 640px; margin: 2rem auto 0; }
+  .form-group { margin-bottom: 1.5rem; text-align: left; }
+  .form-label { display: block; font-weight: 500; font-size: 0.9rem; color: var(--dark); margin-bottom: 0.5rem; }
+  .form-label .req { display: inline-flex; background: var(--coral); color: var(--white); font-size: 0.65rem; padding: 1px 6px; border-radius: 4px; margin-left: 6px; }
+  .form-input, .form-select, .form-textarea {
+    width: 100%; padding: 14px 18px; border-radius: 12px; border: 1.5px solid rgba(74,170,224,0.15);
+    font-size: 1rem; font-family: inherit; color: var(--text); background: var(--white); transition: border-color 0.2s;
+  }
+  .form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: var(--sky); }
+  .form-textarea { resize: vertical; min-height: 120px; }
+  .form-submit {
+    width: 100%; padding: 18px; border-radius: 100px; background: var(--coral); color: var(--white);
+    font-weight: 700; font-size: 1.1rem; border: none; cursor: pointer;
+    box-shadow: 0 6px 20px rgba(240,120,120,0.3); transition: background 0.2s, transform 0.2s;
+  }
+  .form-submit:hover { background: #e86060; transform: translateY(-2px); }
   .form-note { font-size: 0.8rem; color: var(--gray); text-align: center; margin-top: 1rem; line-height: 1.7; font-weight: 300; }
 
   /* ===== FOOTER ===== */
@@ -484,19 +497,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .cta-buttons { flex-direction: column; align-items: stretch; }
     .btn-tel, .btn-form { justify-content: center; }
     .health-chain { gap: 0.35rem; }
-
-    /* Nav logo font scale on small screens */
     .nav-logo { font-size: clamp(0.75rem, 3.5vw, 0.95rem); gap: 4px; }
     .nav-logo .nav-sub { display: none; }
     .nav-cta { padding: 8px 14px; font-size: 0.8rem; }
-
-    /* Floating CTA → full-width bottom bar on mobile */
     .float-cta {
       bottom: 0; right: 0; left: 0;
       flex-direction: row;
-      gap: 0;
-      padding: 0;
-      z-index: 1000;
+      gap: 0; padding: 0; z-index: 1000;
       box-shadow: 0 -4px 12px rgba(26,44,58,0.12);
     }
     .float-btn { flex: 1; border-radius: 0; padding: 14px 10px; box-shadow: none; justify-content: center; font-size: 0.9rem; }
@@ -505,12 +512,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </style>
 </head>
 <body>
- <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7KFBR2K"
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7KFBR2K"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-logo">
     🏠 みらいエコ住宅リフォーム
@@ -519,7 +522,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#form" class="nav-cta">無料見積もり</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-badge reveal">2026年度　補助金 受付スタート</div>
@@ -552,7 +554,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- GALLERY -->
 <section class="section gallery">
   <div class="section-inner">
     <p class="section-label reveal">施工実績</p>
@@ -586,7 +587,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- HEALTH WARNING BANNER -->
 <div class="health-banner reveal">
   <div class="health-banner-inner">
     <h3>🧒 「結露・カビ」が子どもの健康を脅かしています</h3>
@@ -603,7 +603,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<!-- PROBLEM -->
 <section class="section problem">
   <div class="section-inner">
     <p class="section-label reveal">Problem</p>
@@ -644,7 +643,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- AFFINITY -->
 <section class="section affinity">
   <div class="affinity-inner">
     <p class="section-label reveal">Affinity</p>
@@ -663,7 +661,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- HOJOKIN BENTO -->
 <section class="section hojokin">
   <div class="section-inner">
     <p class="section-label reveal">補助金について</p>
@@ -700,7 +697,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- SOLUTION -->
 <section class="section solution">
   <div class="section-inner">
     <p class="section-label reveal">Solution</p>
@@ -753,8 +749,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- GALLERY -->
-<!-- FLOW -->
 <section class="section flow">
   <div class="section-inner">
     <p class="section-label reveal">お申込みの流れ</p>
@@ -799,7 +793,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- MERIT -->
 <section class="section voice">
   <div class="section-inner">
     <p class="section-label reveal">Merit</p>
@@ -824,7 +817,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- OFFER -->
 <section class="section offer">
   <div class="section-inner">
     <p class="section-label reveal">Offer</p>
@@ -864,7 +856,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- NARROW -->
 <section class="narrow">
   <div class="narrow-inner">
     <p class="section-label reveal">Narrowing Down</p>
@@ -877,7 +868,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="section cta-section" id="cta">
   <div class="section-inner">
     <div class="cta-card reveal">
@@ -892,25 +882,82 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- FORM -->
 <section class="section form-section" id="form">
   <div class="section-inner">
     <p class="section-label reveal">Action</p>
     <h2 class="f-h2 section-title reveal" style="text-align:center">無料見積もりフォーム</h2>
     <p class="section-lead reveal" style="text-align:center;margin:0 auto 0;">お気軽にご送信ください。1営業日以内にご連絡いたします。</p>
-    <div class="form-inner reveal">
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLScDxOb5HagQagG-MTse32XOwsSmebd97fm3eTB22KoDd4V4iQ/viewform?embedded=true"
-        width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0"
-        style="border-radius:18px;display:block;" title="無料見積もりフォーム" loading="lazy">
-        読み込んでいます…
-      </iframe>
-      <p class="form-note">送信いただいた情報は見積もり・ご連絡のみに使用します。<br>営業時間：平日・土日祝 9:00〜18:00</p>
+    
+    <div class="form-inner reveal" style="max-width:640px;margin:2rem auto 0;">
+      
+      <form action="https://script.google.com/macros/s/AKfycbxwqIKx5RtoHGn5OasYlJWxRrAHRNpdTqUOlnhcZg_BLks9NVy19tgyjR4FplqksihLAw/exec" method="POST">
+        
+        <div class="form-group">
+          <label class="form-label">お名前<span class="req">必須</span></label>
+          <input type="text" name="name" class="form-input" placeholder="例：山田 太郎" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">メールアドレス<span class="req">必須</span></label>
+          <input type="email" name="email" class="form-input" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">電話番号（日中に連絡がつく番号）<span class="req">必須</span></label>
+          <input type="tel" name="tel" class="form-input" placeholder="090-0000-0000" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">ご希望の連絡方法</label>
+          <select name="contact_method" class="form-select">
+            <option value="">選択してください</option>
+            <option value="電話">電話</option>
+            <option value="メール">メール</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">お住まいの地域</label>
+          <input type="text" name="area" class="form-input" placeholder="例：姫路市安田">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">建物の築年数</label>
+          <input type="text" name="age" class="form-input" placeholder="例：築20年">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">ご希望の工事内容</label>
+          <select name="content" class="form-select">
+            <option value="">選択してください</option>
+            <option value="内窓設置">内窓（二重窓）設置</option>
+            <option value="窓交換">外窓交換（カバー工法）</option>
+            <option value="ガラス交換">ガラス交換</option>
+            <option value="その他">その他（玄関・浴室など）</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">見積もり希望日（月〜日）</label>
+          <input type="text" name="pref_date" class="form-input" placeholder="例：4月5日の午後希望">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">その他、ご相談内容</label>
+          <textarea name="message" class="form-textarea" placeholder="気になることや、補助金について聞きたいことなどをご記入ください"></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">
+          ✉ 無料見積もりを送信する
+        </button>
+        
+      </form>
+
+      <p class="form-note" style="margin-top:1rem;">送信いただいた情報は見積もり・ご連絡のみに使用します。<br>営業時間：平日・土日祝 9:00〜18:00</p>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <p><span class="sky-accent">🏠 みらいエコ住宅リフォーム</span>　｜　姫路市周辺30km圏内対応</p>
   <p>運営：<strong>株式会社ハウスインフォ</strong>　｜　〒670-0955 兵庫県姫路市安田4丁目49-11 Hi2-3F</p>
@@ -918,7 +965,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p style="margin-top:0.75rem">© 2026 株式会社ハウスインフォ. All rights reserved.</p>
 </footer>
 
-<!-- FLOATING CTA -->
 <div class="float-cta" id="floatCta">
   <a href="tel:0792263714" class="float-btn float-tel">📞 無料相談</a>
   <a href="#form" class="float-btn float-form">✉ 見積もり</a>
