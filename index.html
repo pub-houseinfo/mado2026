@@ -78,31 +78,13 @@
     .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
     .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.6)); color: #fff; font-size: 0.75rem; padding: 1rem 0.75rem 0.5rem; }
 
-    /* ===== HOJOKIN BENTO ===== */
-    .hojokin { background: var(--gray-light); }
-    .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-    .bento-card { background: var(--white); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow); }
-    .bento-card.span2 { grid-column: span 2; }
-    .bento-card.accent { background: var(--navy); color: var(--white); }
-    .bento-num { font-size: 2.5rem; font-weight: 900; color: var(--orange); }
-    .bento-card.accent .bento-num { color: #ffb043; }
-    .bento-tag { display: inline-block; background: var(--orange-light); color: var(--orange); padding: 4px 12px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; margin-bottom: 10px; }
-
-    /* ===== FLOW ===== */
-    .flow-step { display: flex; gap: 1.5rem; padding-bottom: 2.5rem; position: relative; }
-    .step-dot { width: 48px; height: 48px; border: 3px solid var(--orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; color: var(--orange); background: #fff; z-index: 1; flex-shrink: 0; }
-
-    /* ===== NARROW & CTA ===== */
-    .narrow { background: linear-gradient(135deg, #7c1d02 0%, #b33000 100%); color: var(--white); text-align: center; padding: 4rem 1.5rem; }
-    .cta-card { background: var(--white); border-radius: 24px; padding: 3.5rem 2rem; box-shadow: var(--shadow-lg); max-width: 720px; margin: 0 auto; text-align: center; }
-
-    /* ===== FORM SECTION (修正済み) ===== */
+    /* ===== FORM SECTION ===== */
     .form-section { background: var(--white); }
     .form-inner { max-width: 640px; margin: 3rem auto 0; }
     .form-group { margin-bottom: 1.5rem; text-align: left; }
     .form-label { display: block; font-weight: 700; font-size: 0.9rem; color: var(--navy); margin-bottom: 0.5rem; }
     .form-label .req { background: var(--orange); color: #fff; font-size: 0.65rem; padding: 2px 6px; border-radius: 4px; margin-left: 6px; }
-    .form-input, .form-select, .form-textarea { width: 100%; padding: 14px 18px; border-radius: 10px; border: 2px solid rgba(26, 46, 74, 0.12); font-size: 1rem; background: var(--gray-light); font-family: inherit; }
+    .form-input, .form-select, .form-textarea { width: 100%; padding: 14px 18px; border-radius: 10px; border: 2px solid rgba(26, 46, 74, 0.12); font-size: 1rem; background: var(--gray-light); font-family: inherit; color: var(--text); }
     .form-textarea { min-height: 120px; resize: vertical; }
     .form-submit { width: 100%; padding: 20px; border-radius: 100px; background: var(--orange); color: #fff; font-weight: 800; font-size: 1.2rem; border: none; cursor: pointer; box-shadow: 0 6px 20px rgba(234, 108, 30, 0.3); transition: transform 0.2s; }
     .form-submit:hover { transform: translateY(-2px); background: #d55c10; }
@@ -114,8 +96,6 @@
     .float-btn { padding: 13px 22px; border-radius: 100px; font-weight: 700; font-size: 0.9rem; border: none; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: var(--shadow-lg); }
 
     @media (max-width: 768px) {
-      .bento-grid { grid-template-columns: 1fr; }
-      .bento-card.span2 { grid-column: span 1; }
       .float-cta { bottom: 0; right: 0; left: 0; flex-direction: row; gap: 0; }
       .float-btn { flex: 1; border-radius: 0; justify-content: center; }
     }
@@ -123,6 +103,8 @@
 </head>
 
 <body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W35MBNB9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav class="nav">
     <div class="nav-logo">🏠 <span>みらいエコ</span>住宅リフォーム</div>
     <a href="#form" class="nav-cta">無料見積もり</a>
@@ -158,17 +140,6 @@
     </div>
   </section>
 
-  <section class="section hojokin">
-    <div class="section-inner">
-      <p class="section-label reveal">補助金</p>
-      <h2 class="f-h2 section-title reveal">2026年度 使える補助金</h2>
-      <div class="bento-grid">
-        <div class="bento-card reveal"><div class="bento-tag">窓リノベ2026</div><div class="bento-num">100万</div><p>断熱窓に特化した高額補助金</p></div>
-        <div class="bento-card span2 accent reveal"><h3>申請はすべておまかせ</h3><p>面倒な手続きは当社が代行。補助金適用の自己負担額を明示します。</p></div>
-      </div>
-    </div>
-  </section>
-
   <section class="section form-section" id="form">
     <div class="section-inner">
       <p class="section-label reveal">Action</p>
@@ -177,7 +148,7 @@
       
       <div class="form-inner reveal">
         
-        <form action="https://script.google.com/macros/s/AKfycbyqOLznnC0N_BlvTWHl9f6pCbuHhPnlgahftwN4xkVAjNgBfMI1XLH3ktGYL2kE9BpO/exec" method="POST">
+        <form action="https://script.google.com/macros/s/AKfycbwcUWzBj4gyTfk7ZwNlEpKEIfEEj8FA9qPCM9LSlxOSU_zdYHTW1YyfnXefH1ydrq30ig/exec" method="POST">
           
           <div class="form-group">
             <label class="form-label">お名前<span class="req">必須</span></label>
@@ -270,6 +241,17 @@
     window.addEventListener('scroll', () => {
       if (window.scrollY > 400) floatCta.classList.add('show');
       else floatCta.classList.remove('show');
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
     });
   </script>
 </body>
