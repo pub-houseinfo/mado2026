@@ -9,9 +9,10 @@
   })(window,document,'script','dataLayer','GTM-W35MBNB9');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>補助金で窓リフォーム｜新築品質の断熱を姫路・近郊で</title>
+  <title>【最大100万円補助金】姫路の窓リフォーム｜LINEで無料相談 受付中</title>
   <meta name="description"
-    content="みらいエコ住宅事業・先進的窓リノベ2026活用。姫路市周辺30km圏内。新築・大規模リフォームで培った技術力で、補助金を使って最短4週間で断熱窓リフォーム完工。無料見積もり受付中。">
+    content="みらいエコ住宅事業・先進的窓リノベ2026活用。姫路市周辺30km圏内。最大100万円の補助金で、最短4週間で断熱窓リフォーム完工。LINE・電話・3項目フォームでカンタンにお問い合わせいただけます。">
+  <link rel="preload" as="image" href="images/int01.webp" type="image/webp" fetchpriority="high">
   <style>
     /* ===== RESET & BASE ===== */
     *,
@@ -35,6 +36,9 @@
       --gray: #6b7280;
       --gray-light: #f9f7f4;
       --text: #1a1a2e;
+      --line: #06C755;
+      --line-dark: #05a748;
+      --gold: #ffb043;
       --radius: 16px;
       --shadow: 0 4px 24px rgba(26, 46, 74, 0.10);
       --shadow-lg: 0 12px 48px rgba(26, 46, 74, 0.16);
@@ -185,12 +189,89 @@
       overflow: hidden;
     }
 
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.32;
+      filter: saturate(0.85);
+    }
+
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 80% 40%, rgba(37, 99, 235, 0.18) 0%, transparent 70%),
+      z-index: 0;
+      background:
+        linear-gradient(135deg, rgba(26, 46, 74, 0.78) 0%, rgba(26, 46, 74, 0.55) 50%, rgba(30, 58, 90, 0.7) 100%),
+        radial-gradient(ellipse 70% 60% at 80% 40%, rgba(37, 99, 235, 0.18) 0%, transparent 70%),
         radial-gradient(ellipse 40% 40% at 20% 80%, rgba(234, 108, 30, 0.12) 0%, transparent 60%);
+    }
+
+    /* 補助金強調パネル（FV内） */
+    .hero-hojokin {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 4px;
+      background: linear-gradient(135deg, rgba(255, 176, 67, 0.18), rgba(234, 108, 30, 0.12));
+      border: 1.5px solid rgba(255, 176, 67, 0.5);
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      margin: 0 0 1.75rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-hojokin-label {
+      font-size: 0.78rem;
+      color: #ffd591;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-hojokin-num {
+      font-size: clamp(2.4rem, 7vw, 4.5rem);
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-hojokin-num small {
+      font-size: 0.45em;
+      font-weight: 700;
+      margin-left: 4px;
+    }
+
+    .hero-hojokin-sub {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-top: 4px;
+    }
+
+    /* 信頼バッジ列 */
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-trust-item {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: rgba(255, 255, 255, 0.92);
+      padding: 5px 12px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 600;
     }
 
     .hero-inner {
@@ -284,6 +365,57 @@
       background: #d55c10;
       transform: translateY(-2px);
       box-shadow: 0 10px 28px rgba(234, 108, 30, 0.45);
+    }
+
+    /* LINEメインCTA */
+    .btn-line {
+      background: var(--line);
+      color: var(--white);
+      padding: 20px 40px;
+      border-radius: 100px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 24px rgba(6, 199, 85, 0.4);
+      border: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .btn-line:hover {
+      background: var(--line-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(6, 199, 85, 0.5);
+    }
+
+    .btn-line .line-icon {
+      width: 22px;
+      height: 22px;
+      background: var(--white);
+      color: var(--line);
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.7rem;
+      letter-spacing: -0.05em;
+    }
+
+    .btn-line-badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: #ff3b30;
+      color: var(--white);
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 100px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
     .btn-outline {
@@ -942,6 +1074,28 @@
       box-shadow: 0 12px 32px rgba(26, 46, 74, 0.35);
     }
 
+    .btn-line-large {
+      background: var(--line);
+      color: var(--white);
+      padding: 22px 44px;
+      border-radius: 100px;
+      font-weight: 800;
+      font-size: 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 28px rgba(6, 199, 85, 0.4);
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-line-large:hover {
+      background: var(--line-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(6, 199, 85, 0.5);
+    }
+
     .cta-note {
       font-size: 0.82rem;
       color: var(--gray);
@@ -1100,6 +1254,16 @@
       color: var(--white);
     }
 
+    .float-line {
+      background: var(--line);
+      color: var(--white);
+      box-shadow: 0 12px 48px rgba(6, 199, 85, 0.4);
+    }
+
+    .float-line:hover {
+      background: var(--line-dark);
+    }
+
     /* ===== MEDIA ===== */
     @media (max-width: 640px) {
       .hero-ctas {
@@ -1149,6 +1313,11 @@
         background: var(--navy);
       }
 
+      .float-line {
+        background: var(--line);
+        box-shadow: none;
+      }
+
       .footer {
         padding-bottom: 80px;
         /* Space for the floating bar */
@@ -1160,8 +1329,14 @@
       }
 
       .btn-tel,
-      .btn-form {
+      .btn-form,
+      .btn-line-large {
         justify-content: center;
+      }
+
+      /* FV補助金パネルをモバイルでフル幅 */
+      .hero-hojokin {
+        width: 100%;
       }
     }
   </style>
@@ -1173,23 +1348,48 @@
   <nav class="nav">
     <div class="nav-logo">🏠 <span>みらいエコ</span>住宅リフォーム <span class="sub-text"
         style="font-size:0.7em;color:var(--gray);font-weight:400;">by ハウスインフォ</span></div>
-    <a href="#form" class="nav-cta">無料見積もり</a>
+    <a href="https://lin.ee/VydBT7j" target="_blank" rel="noopener" class="nav-cta" style="background:var(--line);">💬 LINEで相談</a>
   </nav>
 
   <section class="hero">
+    <div class="hero-bg">
+      <picture>
+        <source srcset="images/int01.webp" type="image/webp">
+        <img src="images/int01.jpg" alt="姫路市香寺町の断熱リフォーム施工事例（内観）"
+             width="960" height="881" fetchpriority="high" decoding="async">
+      </picture>
+    </div>
     <div class="hero-inner">
       <div class="hero-badge reveal">2026年度　補助金 受付スタート</div>
+
+      <div class="hero-trust reveal">
+        <span class="hero-trust-item">✓ 住宅省エネ支援事業者 登録店</span>
+        <span class="hero-trust-item">✓ 姫路市周辺30km圏内対応</span>
+        <span class="hero-trust-item">✓ 補助金申請を全代行</span>
+      </div>
+
       <h1 class="f-hero hero-title reveal reveal-delay-1">
-        家をトータルで<br>手がけるから、わかること。
-        <span class="accent">光熱費が上がる前に、<br>今だけの補助金で<br>新築品質の断熱を。</span>
+        姫路で窓リフォームするなら、<br>
+        <span class="accent">補助金で実質半額以下に。</span>
       </h1>
+
+      <div class="hero-hojokin reveal reveal-delay-1">
+        <span class="hero-hojokin-label">2026年度 補助金で</span>
+        <span class="hero-hojokin-num">最大100<small>万円</small></span>
+        <span class="hero-hojokin-sub">先進的窓リノベ2026 + みらいエコ住宅2026 併用可能</span>
+      </div>
+
       <p class="hero-sub reveal reveal-delay-2">
-        姫路市周辺30km圏内で<strong>最大100万円の補助金</strong>が使える今がチャンス。<br>
-        新築・大規模リフォームで培った本物の技術力で、<br>補助金申請からリフォームまで丸ごとサポートします。
+        <strong>新築・大規模リフォームで培った本物の技術力</strong>で、<br>
+        補助金申請からリフォームまで丸ごとサポート。最短4週間で完工します。
       </p>
       <div class="hero-ctas reveal reveal-delay-3">
-        <a href="tel:0792263714" class="btn-primary">📞 今すぐ無料相談</a>
-        <a href="#form" class="btn-outline">✉ 無料見積もりを依頼する</a>
+        <a href="https://lin.ee/VydBT7j" target="_blank" rel="noopener" class="btn-line">
+          <span class="line-icon">L</span>LINEで無料相談
+          <span class="btn-line-badge">最速30秒</span>
+        </a>
+        <a href="tel:0792263714" class="btn-primary">📞 電話で相談</a>
+        <a href="#form" class="btn-outline">✉ 3項目フォーム</a>
       </div>
       <div class="hero-stats reveal reveal-delay-3">
         <div class="hero-stat">
@@ -1505,8 +1705,11 @@
         先進的窓リノベ2026事業・みらいエコ住宅2026事業は、どちらも<strong>予算に上限が設けられており、予算を超えると申請が締め切られます。</strong><br>「いつでも使える」補助金ではありません。今年度スタートしたばかりの今が、もっとも活用しやすいタイミングです。
       </p>
       <div class="hero-ctas" style="justify-content:center">
-        <a href="tel:0792263714" class="btn-primary">📞 今すぐ無料相談する</a>
-        <a href="#form" class="btn-outline">✉ 無料見積もりを依頼</a>
+        <a href="https://lin.ee/VydBT7j" target="_blank" rel="noopener" class="btn-line-large">
+          <span class="line-icon">L</span>LINEで無料相談
+        </a>
+        <a href="tel:0792263714" class="btn-primary">📞 電話で相談</a>
+        <a href="#form" class="btn-outline" style="border-color:rgba(255,255,255,0.4);">✉ 3項目フォーム</a>
       </div>
     </div>
   </section>
@@ -1515,10 +1718,13 @@
     <div class="section-inner">
       <div class="cta-card reveal">
         <h2 class="f-h2">まず、お気軽にご連絡ください。</h2>
-        <p>補助金の概算・対象工事のご確認・現地調査のご予約など、<br>電話でもフォームでも、どちらでも対応しております。</p>
+        <p>補助金の概算・対象工事のご確認・現地調査のご予約など、<br><strong>LINEなら最速30秒</strong>でご相談いただけます。</p>
         <div class="cta-buttons">
+          <a href="https://lin.ee/VydBT7j" target="_blank" rel="noopener" class="btn-line-large">
+            <span class="line-icon">L</span>LINEで相談（最速30秒）
+          </a>
           <a href="tel:0792263714" class="btn-tel">📞 079-226-3714</a>
-          <a href="#form" class="btn-form">✉ 無料見積もりフォーム</a>
+          <a href="#form" class="btn-form">✉ 3項目フォーム</a>
         </div>
         <p class="cta-note">📅 受付時間 / 平日・土日祝 9:00〜18:00　｜　📍 姫路市周辺30km圏内対応</p>
       </div>
@@ -1528,21 +1734,28 @@
   <section class="section form-section" id="form">
     <div class="section-inner">
       <p class="section-label reveal">Action</p>
-      <h2 class="f-h2 section-title reveal" style="text-align:center">無料見積もりフォーム</h2>
-      <p class="section-lead reveal" style="text-align:center;margin:0 auto 0;">お気軽にご送信ください。1営業日以内にご連絡いたします。</p>
-      
+      <h2 class="f-h2 section-title reveal" style="text-align:center">かんたん3項目フォーム</h2>
+      <p class="section-lead reveal" style="text-align:center;margin:0 auto 0;">必須は3つだけ。30秒で送信完了 ✨ 1営業日以内にご連絡いたします。</p>
+
       <div class="form-inner reveal" style="max-width:640px;margin:2rem auto 0;">
-        
+
+        <!-- LINE優先導線（フォーム上部） -->
+        <div style="background:rgba(6,199,85,0.08);border:1.5px dashed var(--line);border-radius:var(--radius);padding:1.25rem;margin-bottom:2rem;text-align:center;">
+          <p style="font-size:0.92rem;color:var(--navy);font-weight:700;margin-bottom:0.75rem;">
+            💡 LINEなら最速30秒・チャットで気軽にご相談いただけます
+          </p>
+          <a href="https://lin.ee/VydBT7j" target="_blank" rel="noopener" class="btn-line-large" style="padding:14px 28px;font-size:1rem;">
+            <span class="line-icon">L</span>LINEで相談する
+          </a>
+        </div>
+
+        <p style="text-align:center;font-size:0.85rem;color:var(--gray);margin-bottom:1.5rem;">— または、フォームから —</p>
+
         <form action="https://script.google.com/macros/s/AKfycbxwqIKx5RtoHGn5OasYlJWxRrAHRNpdTqUOlnhcZg_BLks9NVy19tgyjR4FplqksihLAw/exec" method="POST">
-          
+
           <div class="form-group">
             <label class="form-label">お名前<span class="req">必須</span></label>
             <input type="text" name="name" class="form-input" placeholder="例：山田 太郎" required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">メールアドレス<span class="req">必須</span></label>
-            <input type="email" name="email" class="form-input" placeholder="example@mail.com" required>
           </div>
 
           <div class="form-group">
@@ -1551,49 +1764,19 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label">ご希望の連絡方法</label>
-            <select name="contact_method" class="form-select">
-              <option value="">選択してください</option>
-              <option value="電話">電話</option>
-              <option value="メール">メール</option>
-            </select>
+            <label class="form-label">お住まいの地域<span class="req">必須</span></label>
+            <input type="text" name="area" class="form-input" placeholder="例：姫路市安田" required>
           </div>
 
           <div class="form-group">
-            <label class="form-label">お住まいの地域</label>
-            <input type="text" name="area" class="form-input" placeholder="例：姫路市安田">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">建物の築年数</label>
-            <input type="text" name="age" class="form-input" placeholder="例：築20年">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">ご希望の工事内容</label>
-            <select name="content" class="form-select">
-              <option value="">選択してください</option>
-              <option value="内窓設置">内窓（二重窓）設置</option>
-              <option value="窓交換">外窓交換（カバー工法）</option>
-              <option value="ガラス交換">ガラス交換</option>
-              <option value="その他">その他（玄関・浴室など）</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">見積もり希望日（月〜日）</label>
-            <input type="text" name="pref_date" class="form-input" placeholder="例：4月5日の午後希望">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">その他、ご相談内容</label>
-            <textarea name="message" class="form-textarea" placeholder="気になることや、補助金について聞きたいことなどをご記入ください"></textarea>
+            <label class="form-label">ご相談内容（任意）</label>
+            <textarea name="message" class="form-textarea" placeholder="気になることや、補助金について聞きたいことなどをご記入ください（空欄でもOK）"></textarea>
           </div>
 
           <button type="submit" class="form-submit">
-            ✉ 無料見積もりを送信する
+            ✉ 無料相談を送信する（30秒）
           </button>
-          
+
         </form>
 
         <p class="form-note" style="margin-top:1rem;">送信いただいた情報は見積もり・ご連絡のみに使用します。<br>営業時間：平日・土日祝 9:00〜18:00</p>
@@ -1609,8 +1792,9 @@
   </footer>
 
   <div class="float-cta" id="floatCta">
-    <a href="tel:0792263714" class="float-btn float-tel">📞 無料相談</a>
-    <a href="#form" class="float-btn float-form">✉ 見積もり</a>
+    <a href="https://lin.ee/VydBT7j" target="_blank" rel="noopener" class="float-btn float-line"><span class="line-icon">L</span>LINE</a>
+    <a href="tel:0792263714" class="float-btn float-tel">📞 電話</a>
+    <a href="#form" class="float-btn float-form">✉ フォーム</a>
   </div>
 
   <script>
